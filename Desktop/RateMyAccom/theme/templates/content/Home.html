@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- 
+<form method="get" action="#" class="grid gap-y-4 p-4 mt-8 w-full bg-white rounded lg:gap-x-4 lg:grid-cols-9 lg:mt-12 dark:bg-gray-800">
+  <div class="lg:col-span-7">
+      <label for="location-form" class="sr-only">Location</label>
+      {% csrf_token %}
+
+      <div class="relative">
+          <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+              <i class="fa-solid fa-building-columns w-5 h-5 text-gray-500 dark:text-gray-400"></i>
+          </div>
+          {{ form.q }}
+   
+  
+      </div>
+  </div>
+
+
+  <button type="submit" class="lg:col-span-2 justify-center md:w-auto text-white bg-sky-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 inline-flex items-center">
+      <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+      Search
+  </button>
+  <div class="rounded-md overflow-hidden bg-blue-500 list-none dropdown-menu font-extrabold text-lg font-mono col-12 pl-2" role="menu" aria-labelledby="menu" id="list">
+    <div  role="menuitem" class="bg-sky-500" tabindex="-1" >HTML</div>
+  </div>
+  
+</form> -->
+
+
+
+
+
+
+
+
+
+<section class="bg-[url('https://images.pexels.com/photos/159490/yale-university-landscape-universities-schools-159490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] min-w-fit bg-no-repeat bg-cover bg-center bg-gray-200 bg-blend-multiply">
+    <div class="relative py-8 px-4 mx-auto max-w-screen-xl text-white lg:py-16 xl:px-0 z-1">
+        <div class="mb-6 max-w-screen-md lg:mb-0">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-tight text-white md:text-5xl lg:text-6xl">Every home is a destination</h1>
+            <a href="#" class="inline-flex items-center py-3 px-5 font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-900 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                Find a Home
+            </a>
+        </div> 
+        <form action="#" >
+          <!-- <div class="min-w-0 flex-1 md:px-8 lg:px-12 xl:col-span-6 mt-4">
+            <div class="flex items-center px-12 py-4 md:mx-auto md:max-w-3xl lg:mx-0 lg:max-w-none xl:px-0">
+              <div class="w-full">
+                <label for="search" class="sr-only">
+                  Search
+                </label>
+                <div class="relative pl-30 pr-30">
+                  <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    
+                  </div>
+                  <input
+                    id="search"
+                    name="search"
+                    class="block !text-black w-full p-2 rounded-md border border-gray-300 bg-white py-3 pl-10 pr-3 text-sm placeholder-gray-500 focus:border-rose-500 focus:text-gray-900 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-rose-500 sm:text-sm"
+                    placeholder="Search"
+                    type="search"
+                  />
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!--
+
+-->
+<div>
+  <label for="combobox" class="block text-sm font-medium text-gray-700">Assigned to</label>
+  <div class="relative mt-1">
+    <form method="get" class="text-black">
+      {% csrf_token %}
+    <!-- <input id="combobox" type="text" class="w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-12 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm" role="combobox" aria-controls="options" aria-expanded="false"> -->
+    {{ form.q }}
+    <button type="button" class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none">
+    </button>
+    </form>
+    <ul id="list" class="absolute text-black z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm" id="options" role="listbox">
+  
+      <li class="relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900" id="option-0" role="option" tabindex="-1">
+        <div class="flex items-center">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-6 w-6 flex-shrink-0 rounded-full">
+          <span class="ml-3 truncate">something</span>
+        </div>
+
+    
+        <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+        </span>
+      </li>
+
+      
+    </ul>
+  </div>
+</div>
+
+         
+       
+            <!-- <button type="submit" class="lg:col-span-2 justify-center md:w-auto text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 inline-flex items-center">
+                <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                Search
+            </button> -->
+        </form>
+    </div>
+  </section>
+
+  <ul role="list" class=" grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:mx-auto sm:gap-x-6 lg:grid-cols-3 lg:px-10 xl:mx-auto xl:gap-x-8">
+
+{% for uni in universities %}
+  
+    <li class="mt-12 relative">
+        <a href="{% url 'accom' uni.name %}">
+      <div class="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+        <img src="{{uni.image.url}}" alt="" class="pointer-events-none object-cover group-hover:opacity-75">
+        <button type="button" class="absolute inset-0 focus:outline-none">
+          <span class="sr-only">{{uni.name}}</span>
+        </button>
+      </div>
+        </a>
+      <div class="bg-gray-500">
+      <p class="pointer-events-none mt-2 block truncate text-lg text-gray-900 font-bold t">{{uni.name}}</p>
+      <p class="pointer-events-none block text-sm font-medium text-gray-500">{{uni.unis.accom|length}}</p>
+    </div>
+    </li>
+  
+    <!-- More files... -->
+{% endfor %}
+</ul>
+
+
+  
+
+
+
+<script>
+  $(document).on('keyup', '#id_q', function (e) {
+      e.preventDefault();
+
+      var minlength = 3;
+      var results = [];
+      var result = [];
+
+
+      if ($('#id_q').val().length >= minlength) {
+          $.ajax({
+              type: 'POST',
+              url: '{% url "search" %}',
+              data: {
+                  ss: $('#id_q').val(),
+                  csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+                  action: 'post'
+              },
+              success: function (json) {
+
+                  $.each(JSON.parse(json.search_string), function (i, item) {
+                      
+                      results.push('<li class="my-2 pl-2 text-black"><a class="text-black" href="/accom/' + item
+                          .fields.name +
+                          '">' + item.fields.name +
+                          '</a></li>')
+                      
+                      
+                      // results.push('<li class="relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900" id="option-0" role="option" tabindex="-1"> \
+                      //           <div class="flex items-center"> \
+                      //             <img src=' + item.image.url + ' alt="" class="h-6 w-6 flex-shrink-0 rounded-full">\
+                      //             <span class="ml-3 truncate text-black">' + item.fields.name + '</span>\
+                      //           </div> \
+                      //           <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600">\
+                      //             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">\
+                      //               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />\
+                      //             </svg>\
+                      //           </span>\
+                      //         </li>')
+
+                      result.push('<li class="my-2 pl-2"><a href="/post/' + item
+                          .fields.slug +
+                          '">' + item.fields.name +
+                          '</a>University</li>')
+                  })
+
+                  if (!$(".show")[0]) {
+                      $('.menudd').trigger('click')
+                  }
+
+                  document.getElementById("list").innerHTML = (!results.length) ?
+                      "No results match your query" : results.join('');
+              },
+              error: function (xhr, errmsg, err) {}
+          });
+      }
+  })
+</script>
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="bg-[url('https://images.pexels.com/photos/159490/yale-university-landscape-universities-schools-159490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] min-w-fit bg-no-repeat bg-cover bg-center bg-gray-200 bg-blend-multiply">
+    <div class="relative py-8 px-4 mx-auto max-w-screen-xl text-white lg:py-16 xl:px-0 z-1">
+        <div class="mb-6 max-w-screen-md lg:mb-0">
+            <h1 class="mb-4 mt-10 text-4xl font-extrabold tracking-tight leading-tight text-white md:text-5xl lg:text-6xl">{{request.resolver_match.kwargs.slug}}</h1>
+           
+        </div> 
+
+    </div>
+  </section>
+{% for accomodation in accomodations %}
+<section class="py-8 lg:py-24 bg-white ">
+    <div class="px-4 mx-auto max-w-screen-xl">
+        <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Read next</h2>
+        <article class="flex mb-8">
+            <a href="{% url 'post' accomodation.name %}"class="shrink-0">
+                <img src="{{accomodation.image.url}}" class="mr-5 w-32 h-32 max-w-fullalign-middle rounded-full" alt="Image 1">
+            </a>
+            <div class="flex flex-col justify-center">
+                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">{{accomodation.name}}</a>
+                </h2>
+                <p class="mb-2 font-light text-gray-500 dark:text-gray-400">{{accomodation.accom.count}} reviews</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 2 minutes
+                    
+                </a>
+            </div>
+        </article>
+   
+    </div>
+</section>
+{% endfor %}
+
+
+  
+{% endblock content %}

@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="bg-[url('https://images.pexels.com/photos/159490/yale-university-landscape-universities-schools-159490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] min-w-fit bg-no-repeat bg-cover h-80 bg-center bg-gray-200 bg-blend-multiply">
+  <div class="relative py-8 px-4 mx-auto max-w-screen-xl bottom-0 left-0 text-white lg:py-16 xl:px-0 z-1">
+      <div class="mb-0 max-w-screen-md lg:mb-0 ">
+          <h1 class="absolute text-2xl  bottom-0 mb-[-50px]  font-extrabold tracking-tight leading-tight text-white md:text-5xl lg:text-6xl">{{request.resolver_match.kwargs.slug}}</h1>
+    
+         
+      </div> 
+
+  </div>
+</section>
+<div class="bg-white">
+    <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-12 lg:gap-x-8 lg:py-32 lg:px-8">
+      <div class="lg:col-span-4">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900">Reviews summary</h2>
+  
+        <div class="mt-3 flex items-center">
+          <div>
+            <div class="flex items-center">
+              <!--
+                Heroicon name: mini/star
+  
+                Active: "text-yellow-400", Default: "text-gray-300"
+              -->
+              <svg class="flex-shrink-0 h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+              </svg>
+  
+              <!-- Heroicon name: mini/star -->
+              <svg class="flex-shrink-0 h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+              </svg>
+  
+              <!-- Heroicon name: mini/star -->
+              <svg class="flex-shrink-0 h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+              </svg>
+  
+              <!-- Heroicon name: mini/star -->
+              <svg class="flex-shrink-0 h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+              </svg>
+  
+              <!-- Heroicon name: mini/star -->
+              <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <p class="sr-only">4 out of 5 stars</p>
+          </div>
+          <p class="ml-2 text-sm text-gray-900">Based on {{review_amount}} reviews</p>
+        </div>
+  
+        <div class="mt-6">
+          <h3 class="sr-only">Review data</h3>
+  
+          <dl class="space-y-3">
+            <div class="flex items-center text-sm">
+              <dt class="flex flex-1 items-center">
+                <p class="w-3 font-medium text-gray-900">5<span class="sr-only"> star reviews</span></p>
+                <div aria-hidden="true" class="ml-1 flex flex-1 items-center">
+                  <!-- Heroicon name: mini/star -->
+                  <svg class="flex-shrink-0 h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                  </svg>
+  
+                  <div class="relative ml-3 flex-1">
+                    <div class="h-3 rounded-full border border-gray-200 bg-gray-100"></div>
+  
+                    <div style="width: calc(1019 / 1624 * 100%)" class="absolute inset-y-0 rounded-full border border-yellow-400 bg-yellow-400"></div>
+                  </div>
+                </div>
+              </dt>
+              <dd class="ml-3 w-10 text-right text-sm tabular-nums text-gray-900">63%</dd>
+            </div>
+  
+            <div class="flex items-center text-sm">
+              <dt class="flex flex-1 items-center">
+                <p class="w-3 font-medium text-gray-900">4<span class="sr-only"> star reviews</span></p>
+                <div aria-hidden="true" class="ml-1 flex flex-1 items-center">
+                  <!-- Heroicon name: mini/star -->
+                  <svg class="flex-shrink-0 h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                  </svg>
+  
+                  <div class="relative ml-3 flex-1">
+                    <div class="h-3 rounded-full border border-gray-200 bg-gray-100"></div>
+  
+                    <div style="width: calc(162 / 1624 * 100%)" class="absolute inset-y-0 rounded-full border border-yellow-400 bg-yellow-400"></div>
+                  </div>
+                </div>
+              </dt>
+              <dd class="ml-3 w-10 text-right text-sm tabular-nums text-gray-900">10%</dd>
+            </div>
+            
+  
+            <div class="flex items-center text-sm">
+              <dt class="flex flex-1 items-center">
+                <p class="w-3 font-medium text-gray-900">3<span class="sr-only"> star reviews</span></p>
+                <div aria-hidden="true" class="ml-1 flex flex-1 items-center">
+                  <!-- Heroicon name: mini/star -->
+                  <svg class="flex-shrink-0 h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                  </svg>
+  
+                  <div class="relative ml-3 flex-1">
+                    <div class="h-3 rounded-full border border-gray-200 bg-gray-100"></div>
+  
+                    <div style="width: calc(97 / 1624 * 100%)" class="absolute inset-y-0 rounded-full border border-yellow-400 bg-yellow-400"></div>
+                  </div>
+                </div>
+              </dt>
+              <dd class="ml-3 w-10 text-right text-sm tabular-nums text-gray-900">6%</dd>
+            </div>
+  
+            <div class="flex items-center text-sm">
+              <dt class="flex flex-1 items-center">
+                <p class="w-3 font-medium text-gray-900">2<span class="sr-only"> star reviews</span></p>
+                <div aria-hidden="true" class="ml-1 flex flex-1 items-center">
+                  <!-- Heroicon name: mini/star -->
+                  <svg class="flex-shrink-0 h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                  </svg>
+  
+                  <div class="relative ml-3 flex-1">
+                    <div class="h-3 rounded-full border border-gray-200 bg-gray-100"></div>
+  
+                    <div style="width: calc(199 / 1624 * 100%)" class="absolute inset-y-0 rounded-full border border-yellow-400 bg-yellow-400"></div>
+                  </div>
+                </div>
+              </dt>
+              <dd class="ml-3 w-10 text-right text-sm tabular-nums text-gray-900">12%</dd>
+            </div>
+  
+            <div class="flex items-center text-sm">
+              <dt class="flex flex-1 items-center">
+                <p class="w-3 font-medium text-gray-900">1<span class="sr-only"> star reviews</span></p>
+                <div aria-hidden="true" class="ml-1 flex flex-1 items-center">
+                  <!-- Heroicon name: mini/star -->
+                  <svg class="flex-shrink-0 h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                  </svg>
+  
+                  <div class="relative ml-3 flex-1">
+                    <div class="h-3 rounded-full border border-gray-200 bg-gray-100"></div>
+  
+                    <div style="width: calc(147 / 1624 * 100%)" class="absolute inset-y-0 rounded-full border border-yellow-400 bg-yellow-400"></div>
+                  </div>
+                </div>
+              </dt>
+              <dd class="ml-3 w-10 text-right text-sm tabular-nums text-gray-900">9%</dd>
+            </div>
+          </dl>
+        </div>
+  
+        <div class="mt-10">
+          <h3 class="text-lg font-medium text-gray-900">Share your thoughts</h3>
+          <p class="mt-1 text-sm text-gray-600">If you’ve used this product, share your thoughts with other customers</p>
+  
+          <a href="{% url 'create' url %}" class="mt-6 inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gray-50 sm:w-auto lg:w-full">Write a review</a>
+        </div>
+      </div>
+  
+      <div class="mt-16 lg:col-span-7 lg:col-start-6 lg:mt-0">
+        <h3 class="sr-only">Recent reviews</h3>
+  
+        <div class="flow-root">
+          <div class="-my-12 divide-y divide-gray-200">
+            {% for post in posts %}
+            <div class="py-12">
+              <div class="flex items-center">
+                <img src="{{post.accom.uni.image.url}}" alt="Emily Selman." class="h-12 w-12 rounded-full">
+                <div class="ml-4">
+                  <a href="{% url 'accom' post.accom.uni.name %}">
+                  <h4 class="text-sm font-bold text-blue-900 deco hover:underline">{{post.accom.uni}}</h4>
+                </a>
+                  <div class="mt-1 flex items-center">
+                    <!--
+                      Heroicon name: mini/star
+  
+                      Active: "text-yellow-400", Default: "text-gray-300"
+                    -->
+                    <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                    </svg>
+  
+                    <!-- Heroicon name: mini/star -->
+                    <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                    </svg>
+  
+                    <!-- Heroicon name: mini/star -->
+                    <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                    </svg>
+  
+                    <!-- Heroicon name: mini/star -->
+                    <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                    </svg>
+  
+                    <!-- Heroicon name: mini/star -->
+                    <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="sr-only">5 out of 5 stars</p>
+                </div>
+              </div>
+  
+              <div class="mt-4 space-y-6 text-base italic text-gray-600">
+                <p>{{post.description}}</p>
+              </div>
+            </div>
+              {% endfor %}
+            <!-- More reviews... -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+{% endblock content %}
